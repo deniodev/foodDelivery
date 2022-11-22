@@ -5,11 +5,12 @@
  * add event on multiple elements
  */
 
-const addEventOnElements = function (elem, type, callback) {
-    for (let i=0; len = elem.length; i < len; i++) {
-        elem[i].addEventListener(type, callback);
+ const addEventOnElements = function (elem, type, callback) {
+    for (let i = 0, len = elem.length; i < len; i++) {
+      elem[i].addEventListener(type, callback);
     }
-}
+  }
+  
 
 
 /**
