@@ -199,7 +199,7 @@ body.active { overflow: hidden;}
   #HEADER
 \*-----------------------------------*/
 
-.navbar,
+
 .overlay,
 .header .btn { display: none; }
 
@@ -243,6 +243,44 @@ body.active { overflow: hidden;}
 
 .nav-open-btn { font-size: 2.2rem;}
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+  padding: 50px 40px;
+  visibility: hidden;
+  transition: 0.35s var(--cubic-out);
+  z-index: 2;
+}
+
+.navbar.active {
+  transform: translateX(100%);
+  visibility: visible;
+  transition-duration: 0.5s;
+
+}
+
+.nav-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--davys-gray);
+  font-size: 2.8rem;
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius-circle);
+  padding: 2px;
+}
+
+.nav-close-btn ion-icon { --ionicon-stroke-width: 35px; }
+
+.navbar.logo { margin-block-end: 30px; }
+
+.navbar-item { border-block-end: 1px solid var(--light-gray); }
+
+.navbar-link:is(:hover, :focus-visible) { color: var(--jet); }
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
