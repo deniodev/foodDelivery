@@ -208,7 +208,7 @@ body.active { overflow: hidden;}
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 30px;
+  padding-block: 20px;
   z-index: 4;
 }
 
@@ -281,6 +281,8 @@ body.active { overflow: hidden;}
 .navbar-item { border-block-end: 1px solid var(--light-gray); }
 
 .navbar-link:is(:hover, :focus-visible) { color: var(--jet); }
+
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
