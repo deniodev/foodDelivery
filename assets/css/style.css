@@ -118,10 +118,13 @@ body {
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.6;
-  height: 300vh;
   overflow: hidden;
 }
-body.loaded { overflow: visible; }
+
+body.loaded { 
+  overflow-x: hidden;
+  overflow-y: visible;
+ }
 
 body.active { overflow: hidden;}
 
@@ -146,7 +149,77 @@ body.active { overflow: hidden;}
 
 .container { padding-inline: 15px; }
 
+.section { padding-block: var(--section-padding); }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  color: var(--jet);
+  font-weight: var(--fw-700);
+  line-height: 1.2;
+}
+
+.h1,
+.h2 { font-size: var(--fs-2); }
+
+.h3 { font-size: var(--fs-5); }
+
+.h4 { font-size: var(--fs-6); }
+
+.h5 { font-size: var(--fs-8); }
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.has-before,
+.has-after {
+  position: absolute;
+  content: "";
+}
+
+.btn {
+  padding: 13px 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: max-content;
+  background-color: var(--marigold);
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: var(--radius-10);
+  border: 2px solid var(--marigold);
+  transition: var(--transition-1);
+  overflow: hidden;
+}
+
+.btn::after {
+  inset: -35px -20px;
+  transform: skewY(25deg) translateY(-130px);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.btn:is(:hover, :focus-visible)::after { transform: skewY(25deg) translateY(0); }
+
+.btn-primary::after { background-color: var(--white); }
+
+.btn-primary:is(:hover, :focus-visible) { color: var(--marigold); }
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--marigold);
+}
+
+.btn-secondary::after { background-color: var(--marigold); }
+
+.btn-secondary:is(hover, :focus-visible) {color: var(--white);}
+
+.w-100 { width: 100%; }
 
 
 /*-----------------------------------*\
@@ -287,7 +360,16 @@ body.active { overflow: hidden;}
   #HERO
 \*-----------------------------------*/
 
+.hero { padding-block-start: calc(var(--section-padding) + 5px); }
 
+.hero .container {
+  display: grid;
+  gap: 80px;
+}
+
+.hero-text { margin-block: 8px 40px; }
+
+.hero .shape { display: none;}
 
 
 
