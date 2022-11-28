@@ -221,6 +221,13 @@ body.active { overflow: hidden;}
 
 .w-100 { width: 100%; }
 
+.section-title { margin-block-end: 20px; }
+
+.grid-list {
+  display: grid;
+  gap: 60px;
+}
+
 
 /*-----------------------------------*\
   #LOADING
@@ -369,7 +376,8 @@ body.active { overflow: hidden;}
 
 .hero-text { margin-block: 8px 40px; }
 
-.hero .shape { display: none;}
+.hero .shape { display: none; }
+
 
 
 
@@ -377,8 +385,21 @@ body.active { overflow: hidden;}
   #INSTRUCTION
 \*-----------------------------------*/
 
+.instruction {
+  padding-block-start: 0;
+  text-align: center;
+}
 
+.instruction .section-text { margin-block-end: 60px; }
 
+.instruction .card-title { margin-block: 25px; }
+
+.instruction .card-title .span {
+  display: inline-block;
+  color: var(--light-gray);
+  font-size: var(--fs-4);
+  line-height: 1;
+}
 
 
 /*-----------------------------------*\
