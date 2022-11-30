@@ -228,6 +228,15 @@ body.active { overflow: hidden;}
   gap: 60px;
 }
 
+.rating-wrapper {
+  display: flex;
+  gap: 2px;
+  }
+
+.rating-wrapper ion-icon {
+  color: var(--marigold);
+  font-size: 2rem;
+} 
 
 /*-----------------------------------*\
   #LOADING
@@ -406,9 +415,42 @@ body.active { overflow: hidden;}
   #TOP RESTAURANT
 \*-----------------------------------*/
 
+.restaurant-caard { padding: 20px; }
 
+.restaurant-caard .card-icon {
+  width: 100px;
+  border-radius: var(--radius-15);
+  overflow: hidden;
+  margin-block-end: 20px;
+}
 
+.restaurant-caard .rating-wrapper { margin-block-start: 5px; }
 
+.restaurant-caard .card-meta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.restaurant-caard .card-meta {
+  color: var(--marigold);
+  font-size: var(--fs-11);
+  border: 1px solid;
+  padding: 5px 15px;
+  border-radius: var(--radius-10);
+  margin-block: 15px 20px;
+  transition: var(--transition-1);
+}
+
+.restaurant-caard .card-meta:is(:hover, :focus-visible) {
+  background-color: var(--marigold);
+  color: var(--white);
+}
+
+.top-restaurant .btn {
+  margin-inline: auto;
+  margin-block-start: 40px;
+}
 
 /*-----------------------------------*\
   #CTA
