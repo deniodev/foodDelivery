@@ -452,11 +452,18 @@ body.active { overflow: hidden;}
   margin-block-start: 40px;
 }
 
+
+
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
 
+.cta .container {
+  display: grid;
+  gap: 60px;
+}
 
+.cta .section-text { margin-block: 20px 30px;}
 
 
 
